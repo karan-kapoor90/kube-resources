@@ -7,7 +7,7 @@ metadata:
   name: k-details
   namespace: k-tenant
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: k-details
@@ -23,7 +23,7 @@ spec:
         app: k-details
     spec:
       containers:
-      - image: karankapoor/multi-tenant:56ddd8b933bf678362cc45fcf7c2b436a1f05afa
+      - image: karankapoor/multi-tenant:c11423bc4bb27a28e325b816372992b467043d95
         name: k-details
         imagePullPolicy: Always
         ports:
