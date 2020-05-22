@@ -22,7 +22,7 @@ spec:
         app: k-details
     spec:
       containers:
-      - image: karankapoor/multi-tenant:source-base-code/.git/ref
+      - image: karankapoor/multi-tenant:.git/tefs/heads/master
         name: k-details
         imagePullPolicy: Always
         ports:
