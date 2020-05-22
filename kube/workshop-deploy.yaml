@@ -5,8 +5,9 @@ metadata:
   labels:
     tier: app
   name: k-details
+  namespace: k-tenant
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: k-details
@@ -22,7 +23,7 @@ spec:
         app: k-details
     spec:
       containers:
-      - image: karankapoor/multi-tenant:483249fcf76c0f138ac1c5311fd71767882e5530
+      - image: karankapoor/multi-tenant:56ddd8b933bf678362cc45fcf7c2b436a1f05afa
         name: k-details
         imagePullPolicy: Always
         ports:
