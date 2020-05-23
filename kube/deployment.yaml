@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    tier: app
+  name: k-details
+  namespace: k-tenant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tenant-details
+  strategy:
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: tenant-details
+    spec:
+      containers:
+      - image: karankapoor/multi-tenant:b5cfb0e9e31ce6505964a1d112e306b6ba5070df
+        name: tenant-details
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: tenant-identity
