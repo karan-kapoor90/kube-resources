@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     tier: app
-  name: k-details
+  name: tenant-details
   namespace: k-tenant
 spec:
   replicas: 1
@@ -23,7 +23,7 @@ spec:
         app: tenant-details
     spec:
       containers:
-      - image: karankapoor/multi-tenant:b5cfb0e9e31ce6505964a1d112e306b6ba5070df
+      - image: karankapoor/multi-tenant:1a8fcdf22b0e6af9c05d9424cbd0cd0d620149fd
         name: tenant-details
         imagePullPolicy: Always
         ports:
