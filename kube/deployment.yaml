@@ -7,7 +7,7 @@ metadata:
   name: tenant-details
   namespace: tenant-details
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: tenant-details
@@ -23,7 +23,7 @@ spec:
         app: tenant-details
     spec:
       containers:
-      - image: karankapoor/tenant-details:2eb2851556f651ce4f424aec4c82d116502a8ad2
+      - image: karankapoor/tenant-details:72923c3ccb87486a8039c61f422ab650a0186ee7
         name: tenant-details
         imagePullPolicy: Always
         ports:
