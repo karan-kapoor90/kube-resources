@@ -23,7 +23,7 @@ spec:
         app: tenant-details
     spec:
       containers:
-      - image: karankapoor/tenant-details:17d2508612b81bef35a4b06865c1a50b1a5512f9
+      - image: karankapoor/tenant-details:2eb2851556f651ce4f424aec4c82d116502a8ad2
         name: tenant-details
         imagePullPolicy: Always
         ports:
@@ -31,3 +31,7 @@ spec:
         envFrom:
         - configMapRef:
             name: tenant-identity
+        resources:
+          limits:
+            memory: "32Mi"
+            cpu: "250m"
