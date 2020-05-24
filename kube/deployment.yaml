@@ -23,7 +23,7 @@ spec:
         app: tenant-details
     spec:
       containers:
-      - image: karankapoor/tenant-details:72923c3ccb87486a8039c61f422ab650a0186ee7
+      - image: karankapoor/tenant-details:7031c1863714c032a248ffe00ad90707affe8bd0
         name: tenant-details
         imagePullPolicy: Always
         ports:
