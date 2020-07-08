@@ -23,15 +23,15 @@ spec:
         app: tenant-details
     spec:
       containers:
-      - image: karankapoor/tenant-details:3f9fd60993b03a354d165606970b127c6deb98e3
-        name: tenant-details
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 3000
-        envFrom:
-        - configMapRef:
-            name: tenant-identity
-        resources:
-          limits:
-            memory: "32Mi"
-            cpu: "250m"
+        - image: karankapoor/tenant-details:7dd53476e0ea5ca2755a06296a37e861f3e53002
+          name: tenant-details
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: tenant-identity
+          resources:
+            limits:
+              memory: "32Mi"
+              cpu: "250m"
